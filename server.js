@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors');
 
 const app = express()
+app.use(cors())
 const db=require('./db')
 app.use(express.json())
 const path = require('path')
