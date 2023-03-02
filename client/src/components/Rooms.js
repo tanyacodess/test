@@ -13,7 +13,7 @@ function Rooms() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("/api/rooms/getallrooms")
+        await axios.get("https://stormy-clam-top-hat.cyclic.app/api/rooms/getallrooms")
       ).data;
       setrooms(data);
       setloading(false);

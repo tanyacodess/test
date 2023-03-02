@@ -25,7 +25,7 @@ function Bookingscreen({match}) {
         
         try {
             setloading(true);
-            const data = await (await axios.post("/api/rooms/getroombyid" , {roomid})).data;
+            const data = await (await axios.post("https://stormy-clam-top-hat.cyclic.app/api/rooms/getroombyid" , {roomid})).data;
             console.log(data);
             setroom(data);
             setloading(false);
@@ -56,7 +56,7 @@ function Bookingscreen({match}) {
 
         try {
             setloading(true);
-            const result = await axios.post('/api/bookings/bookroom' , bookingDetails)
+            const result = await axios.post('https://stormy-clam-top-hat.cyclic.app/api/bookings/bookroom' , bookingDetails)
             setloading(false)
             Swal.fire('Congrats' , 'Your Room has booked succeessfully' , 'success').then(result=>{
                 window.location.href='/profile'

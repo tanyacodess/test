@@ -13,7 +13,7 @@ function Bookings() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("/api/bookings/getallbookings")
+        await axios.get("https://stormy-clam-top-hat.cyclic.app/api/bookings/getallbookings")
       ).data;
       setbookings(data);
       setloading(false);

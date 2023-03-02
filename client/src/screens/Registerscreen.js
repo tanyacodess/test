@@ -27,7 +27,7 @@ export default function Registerscreen() {
           
           try {
             setloading(true)
-            const result = await axios.post('/api/users/register',user)
+            const result = await axios.post('https://stormy-clam-top-hat.cyclic.app/api/users/register',user)
             setloading(false)
             setsuccess(true)
             setemail('')

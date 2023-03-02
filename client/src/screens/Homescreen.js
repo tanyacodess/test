@@ -62,7 +62,7 @@ function Homescreen() {
   useEffect(async () => {
     try {
       setloading(true);
-      const rooms = await (await axios.get("/api/rooms/getallrooms")).data;
+      const rooms = await (await axios.get("https://stormy-clam-top-hat.cyclic.app/api/rooms/getallrooms")).data;
       console.log(rooms);
       sethotels(rooms);
       setduplicatehotes(rooms)
